@@ -20,6 +20,11 @@ Los componentes principales del proyecto son:
 - **MthService:** Clase que ofrece servicios para realizar búsquedas lineales y binarias en listas de enteros a través de solicitudes HTTP GET.
 - **ServiceProxy:** Clase que actúa como un proxy de servicio para enrutar solicitudes de búsqueda a diferentes servidores, utilizando un balanceo de carga round-robin.
 
+### Arquitectura
+
+El sistema se despliega en tres máquinas virtuales de EC2 de AWS. Dos de estas instancias alojan los servicios de búsqueda (búsqueda lineal y búsqueda binaria), mientras que la tercera instancia ejecuta el servicio proxy. Este diseño permite una distribución eficiente de la carga de trabajo y una escalabilidad horizontal.
+![img.png](media/img.png)
+
 ### Flujo de Trabajo
 
 El flujo de trabajo del proyecto es el siguiente:
