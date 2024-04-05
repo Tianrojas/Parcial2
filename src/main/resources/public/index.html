@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Operations</title>
+</head>
+<body>
+<div class="container">
+    <h1>Search Operations</h1>
+    <div>
+        <form id="linearSearchForm" onsubmit="performLinearSearch(event)">
+            <label for="linearSearchInput">Enter a comma-separated list:</label>
+            <input type="text" id="linearSearchInput" name="linearSearchInput" required>
+            <label for="linearSearchValue">Value to search:</label>
+            <input type="text" id="linearSearchValue" name="linearSearchValue" required>
+            <button type="submit">Perform Linear Search</button>
+        </form>
+    </div>
+    <div>
+        <form id="binarySearchForm" onsubmit="performBinarySearch(event)">
+            <label for="binarySearchInput">Enter a sorted comma-separated list:</label>
+            <input type="text" id="binarySearchInput" name="binarySearchInput" required>
+            <label for="binarySearchValue">Value to search:</label>
+            <input type="text" id="binarySearchValue" name="binarySearchValue" required>
+            <button type="submit">Perform Binary Search</button>
+        </form>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

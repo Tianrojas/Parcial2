@@ -6,11 +6,22 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * Esta clase proporciona métodos para realizar solicitudes HTTP GET y manejar las respuestas.
+ */
 public class HttpConnectionExample {
 
+    /** Agente de usuario para las solicitudes HTTP. */
     private static final String USER_AGENT = "Mozilla/5.0";
+
+    /** URL de la solicitud HTTP GET. */
     private static String GET_URL = "";
 
+    /**
+     * Realiza una solicitud HTTP GET a la URL especificada y devuelve la respuesta como una cadena de texto.
+     * @param urlString La URL a la que se enviará la solicitud HTTP GET.
+     * @return La respuesta del servidor como una cadena de texto.
+     */
     public static String sendGetRequest(String urlString) {
         StringBuilder response = new StringBuilder();
 
@@ -41,10 +52,18 @@ public class HttpConnectionExample {
         return response.toString();
     }
 
+    /**
+     * Devuelve la salida de la solicitud HTTP GET realizada anteriormente.
+     * @return La salida de la solicitud HTTP GET como una cadena de texto.
+     */
     public static String getOutput() {
         return sendGetRequest(GET_URL);
     }
 
+    /**
+     * Establece la URL para la próxima solicitud HTTP GET.
+     * @param urlString La URL para la próxima solicitud HTTP GET.
+     */
     public static void setURL(String urlString) {
         GET_URL = urlString;
     }
